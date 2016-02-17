@@ -5,7 +5,9 @@ import lombok.Setter;
 
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Model;
+import javax.faces.context.ExternalContext;
 import javax.inject.Named;
+import java.io.IOException;
 import java.io.Serializable;
 
 /**
@@ -17,4 +19,15 @@ import java.io.Serializable;
 @Setter
 public class HelloBean implements Serializable {
     private String testString = "Hello world";
+    private String pressButton = "Button";
+
+    ExternalContext externalContext;
+
+    public String spellCheck() {
+        if (testString.equals("дурак")) {
+            return "badWord?faces-redirect=true";
+         //   externalContext.redirect("badWord");
+        }
+        return testString;
+    }
 }

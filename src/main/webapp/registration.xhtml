@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/default.xhtml">
+    <ui:define name="content">
+
+        <div id="form">
+            <h:form>
+            <h:outputText value="Username:"></h:outputText>
+            <h:inputText id="username" value="#{registration.username}"></h:inputText>
+            <h:outputText value="Password"></h:outputText>
+            <h:inputSecret  id="password" value="#{registration.password}" >    </h:inputSecret>
+            <h:commandLink value="SignUp" action="#{registration.registrate}"></h:commandLink>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>

@@ -18,6 +18,19 @@
         <view-id value="/test.jsf" />
     </url-mapping>
 
+    <url-mapping id="bad">
+        <pattern value="/badWord" />
+        <view-id value="/badWord.jsf" />
+    </url-mapping>
 
+    <url-mapping id="registration">
+        <pattern value="/registration" />
+        <view-id value="/registration.jsf" />
+    </url-mapping>
+
+    <url-mapping id="userList">
+        <pattern value="/userslist" />
+        <view-id value="/userslist.jsf" />
+    </url-mapping>
 
 </pretty-config>

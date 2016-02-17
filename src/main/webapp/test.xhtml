@@ -5,7 +5,26 @@
                 xmlns:h="http://java.sun.com/jsf/html"
                 template="/WEB-INF/templates/default.xhtml">
     <ui:define name="content">
-        #{helloBean.testString}
+        <div id="form">
+            #{helloBean.testString}
+
+            <h:form>
+                <h:inputText value="#{helloBean.testString}"/>
+                <h:commandLink value="#{helloBean.pressButton}" action="#{helloBean.spellCheck}">
+                    <f:ajax render="form"/>
+                </h:commandLink>
+
+            </h:form>
+        </div>
+
+        <ui:define name="content">
+            <ui:repeat value="#{registration.users}" var="item">
+                ---------------------------------------------3
+                #{item.password}<br/>
+                #{item.username}<br/>
+                ---------------------------------------------
+            </ui:repeat>
+        </ui:define>
     </ui:define>
 </ui:composition>
 
